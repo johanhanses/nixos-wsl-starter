@@ -1,7 +1,7 @@
 {
   description = "NixOS configuration";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/525f2b1e5dc53a3a55b0a47ab31685c76fa3b0dd";  # Known working revision
   inputs.nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
   inputs.home-manager.url = "github:nix-community/home-manager/release-24.05";
