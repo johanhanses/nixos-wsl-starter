@@ -1,10 +1,10 @@
 {
   description = "NixOS configuration";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";  # Using a stable release
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";  # Using unstable which should have newer Rust
   inputs.nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-  inputs.home-manager.url = "github:nix-community/home-manager/release-23.11";  # Match home-manager with nixpkgs
+  inputs.home-manager.url = "github:nix-community/home-manager";  # Latest home-manager
   inputs.home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
   inputs.nur.url = "github:nix-community/NUR";
