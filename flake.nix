@@ -41,6 +41,13 @@
               inherit config;
             };
           })
+
+          # Add this new overlay
+          (final: prev: {
+            bash-completion = prev.bash-completion.overrideAttrs (old: {
+              outputHash = "sha256:1757yp45kj7xn5yqa30pf48s3vx97cfyw6irvy5jd2bhlq5m11m1";
+            });
+          })
         ];
       });
 
