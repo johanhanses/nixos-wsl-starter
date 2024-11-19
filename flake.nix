@@ -86,7 +86,8 @@
         modules = [
           nixos-wsl.nixosModules.wsl
           ./wsl.nix
-          ./disable-bash-completion.nix  # Add this line
+          ./disable-bash-completion.nix
+          ./skip-man.nix
         ];
       };
     };

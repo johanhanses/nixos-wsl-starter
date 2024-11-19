@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-  programs.bash.enableCompletion = false;
+  programs.bash.completion.enable = false;
 }
