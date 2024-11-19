@@ -41,13 +41,6 @@
               inherit config;
             };
           })
-
-          # Add this new overlay
-          (final: prev: {
-            bash-completion = prev.bash-completion.overrideAttrs (old: {
-              outputHash = "sha256:1757yp45kj7xn5yqa30pf48s3vx97cfyw6irvy5jd2bhlq5m11m1";
-            });
-          })
         ];
       });
 
@@ -87,12 +80,13 @@
     in {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
 
-      nixosConfigurations.nixos = mkNixosConfiguration {
+       nixosConfigurations.nixos = mkNixosConfiguration {
         hostname = "nixos";
-        username = "johanhanses"; # FIXME: replace with your own username!
+        username = "johanhanses";
         modules = [
           nixos-wsl.nixosModules.wsl
           ./wsl.nix
+          ./disable-bash-completion.nix  # Add this line
         ];
       };
     };
