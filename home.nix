@@ -209,6 +209,7 @@ in {
         }
         # git shortcuts
         // {
+          ga = "git add .";
           gapa = "git add --patch";
           grpa = "git reset --patch";
           gst = "git status";
@@ -217,7 +218,8 @@ in {
           gph = "git push -u origin HEAD";
           gco = "git checkout";
           gcob = "git checkout -b";
-          gcm = "git checkout master";
+          gm = "git checkout master";
+          gcm = "git commit -m";
           gcd = "git checkout develop";
           gsp = "git stash push -m";
           gsa = "git stash apply stash^{/";
