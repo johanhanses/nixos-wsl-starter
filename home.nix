@@ -209,6 +209,7 @@ in {
         }
         # git shortcuts
         // {
+          gs = "git status";
           ga = "git add .";
           gapa = "git add --patch";
           grpa = "git reset --patch";
