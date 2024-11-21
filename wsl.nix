@@ -20,6 +20,10 @@
 
   security.sudo.wheelNeedsPassword = false;
 
+  environment.systemPackages = with pkgs; [
+    nodejs_18
+  ];
+
   # FIXME: uncomment the next line to enable SSH
   # services.openssh.enable = true;
 
@@ -70,7 +74,6 @@
     paths.vscode-remote-workaround = {
       wantedBy = ["default.target"];
       pathConfig.PathChanged = "%h/.vscode-server/bin";
-      enable = true;
     };
     services.vscode-remote-workaround.script = ''
       for i in ~/.vscode-server/bin/*; do
