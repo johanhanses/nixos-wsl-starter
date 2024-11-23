@@ -1,10 +1,10 @@
 {
   description = "NixOS configuration";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";  # Using unstable which should have newer Rust
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable"; # Using unstable which should have newer Rust
   inputs.nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-  inputs.home-manager.url = "github:nix-community/home-manager";  # Latest home-manager
+  inputs.home-manager.url = "github:nix-community/home-manager"; # Latest home-manager
   inputs.home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
   inputs.nur.url = "github:nix-community/NUR";
@@ -80,7 +80,7 @@
     in {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
 
-       nixosConfigurations.nixos = mkNixosConfiguration {
+      nixosConfigurations.nixos = mkNixosConfiguration {
         hostname = "nixos";
         username = "johanhanses";
         modules = [
